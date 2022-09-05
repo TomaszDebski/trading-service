@@ -38,7 +38,7 @@ public class OrderController {
         DetailOrderResponse detailOrderResponse =
                 orderApplicationService.fetchOrderDetails(
                         DetailOrderQuery.builder().orderId(orderId).build());
-        log.info("Returning order status with tracking id: {}", detailOrderResponse.getOrderId());
+        log.info("Returning order status with id: {}", detailOrderResponse.getOrderId());
         return  ResponseEntity.ok(detailOrderResponse);
     }
 }

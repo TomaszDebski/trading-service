@@ -20,13 +20,10 @@ public class OrderEditCommandHandler {
 
     private final OrderDataMapper orderDataMapper;
 
-    private final OrderQueryHandler orderQueryHandler;
-
     public OrderEditCommandHandler(OrderRepository orderRepository,
                                    OrderDataMapper orderDataMapper, OrderQueryHandler orderQueryHandler) {
         this.orderRepository = orderRepository;
         this.orderDataMapper = orderDataMapper;
-        this.orderQueryHandler = orderQueryHandler;
     }
 
         @Transactional

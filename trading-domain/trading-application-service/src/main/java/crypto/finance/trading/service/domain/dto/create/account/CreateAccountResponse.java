@@ -12,9 +12,9 @@ import java.util.UUID;
 @Builder
 @AllArgsConstructor
 public class CreateAccountResponse {
+
     @NotNull
     private final Long accountId;
-
     @NotNull
     private final String name;
     @NotNull

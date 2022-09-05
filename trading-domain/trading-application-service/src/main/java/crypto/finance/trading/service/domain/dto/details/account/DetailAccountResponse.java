@@ -12,12 +12,11 @@ import java.util.UUID;
 @Builder
 @AllArgsConstructor
 public class DetailAccountResponse {
+
     @NotNull
     private final Long accountId;
-
     @NotNull
     private final String name;
-
     @NotNull
     private final BigDecimal usd_balance;
     @NotNull

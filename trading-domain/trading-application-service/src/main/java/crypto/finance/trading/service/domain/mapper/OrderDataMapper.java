@@ -41,21 +41,9 @@ public class OrderDataMapper {
                 .orderStatus(order.getOrderLimitStatus())
                 .priceLimit(order.getPriceLimit())
                 .accountId(order.getAccountId().getValue())
-//                .failureMessages(account.getFailureMessages())
                 .build();
     }
 
-    public Order detailOrderResponseToOrder(DetailOrderResponse detailOrderResponse) {
-        return Order.builder()
-//                .orderId(detailOrderResponse.getOrderId())
-//                .name(order.get)
-//                .btc(order.getAmount())
-//                .usd_balance(order.getAmount())
-//                .orderTrackingId(account.getTrackingId().getValue())
-//                .orderStatus(account.getOrderStatus())
-//                .failureMessages(account.getFailureMessages())
-                .build();
-    }
 
     public Order updateOrder(Order order, OrderLimitStatus orderLimitStatus){
         return Order.builder()

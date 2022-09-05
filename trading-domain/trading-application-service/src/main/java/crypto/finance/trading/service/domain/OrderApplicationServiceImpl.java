@@ -23,8 +23,6 @@ public class OrderApplicationServiceImpl implements OrderApplicationService {
 
     private final OrderCreateCommandHandler orderCreateCommandHandler;
 
-    private final AccountQueryHandler accountDetailCommandHandler;
-
     private final OrderEditCommandHandler orderEditCommandHandler;
 
     private final OrderDataMapper orderDataMapper;
@@ -32,10 +30,10 @@ public class OrderApplicationServiceImpl implements OrderApplicationService {
     private final OrderQueryHandler orderQueryHandler;
 
     public OrderApplicationServiceImpl(OrderCreateCommandHandler orderCreateCommandHandler,
-                                       AccountQueryHandler accountDetailCommandHandler,
-                                       OrderEditCommandHandler orderEditCommandHandler, OrderDataMapper orderDataMapper, OrderQueryHandler orderQueryHandler) {
+                                       OrderEditCommandHandler orderEditCommandHandler,
+                                       OrderDataMapper orderDataMapper,
+                                       OrderQueryHandler orderQueryHandler) {
         this.orderCreateCommandHandler = orderCreateCommandHandler;
-        this.accountDetailCommandHandler = accountDetailCommandHandler;
         this.orderEditCommandHandler = orderEditCommandHandler;
         this.orderDataMapper = orderDataMapper;
         this.orderQueryHandler = orderQueryHandler;

@@ -25,7 +25,8 @@ public class OrderRepositoryImpl implements OrderRepository {
 
     public OrderRepositoryImpl(
             OrderJpaRepository orderJpaRepository,
-            AccountJpaRepository accountJpaRepository, OrderDataAccessMapper orderDataAccessMapper) {
+            AccountJpaRepository accountJpaRepository,
+            OrderDataAccessMapper orderDataAccessMapper) {
         this.orderJpaRepository = orderJpaRepository;
         this.accountJpaRepository = accountJpaRepository;
         this.orderDataAccessMapper = orderDataAccessMapper;

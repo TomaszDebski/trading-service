@@ -12,12 +12,6 @@ import java.math.BigDecimal;
 @AllArgsConstructor
 public class DetailOrderQuery {
     @NotNull
-//    private final UUID accountId;
     private final Long orderId;
-//    @NotNull
-    private final String name;
-//    @NotNull
-    private final BigDecimal usd_balance;
 
-    private final BigDecimal btc;
 }

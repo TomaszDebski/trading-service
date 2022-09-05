@@ -12,9 +12,9 @@ import java.math.BigDecimal;
 @Builder
 @AllArgsConstructor
 public class DetailOrderResponse {
+
     @NotNull
     private final Long orderId;
-
     @NotNull
     private final Long accountId;
     @NotNull

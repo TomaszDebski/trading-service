@@ -20,5 +20,4 @@ public class CreateAccountCommand {
     @NotNull
     private final BigDecimal usd_balance;
 
-//    private final BigDecimal btc;
 }

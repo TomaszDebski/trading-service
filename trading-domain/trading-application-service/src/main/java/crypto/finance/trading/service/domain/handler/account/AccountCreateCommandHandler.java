@@ -41,10 +41,15 @@ public class AccountCreateCommandHandler {
 
     @Transactional
     public Account editAccount(Long accountId, BigDecimal amount, BtcPriceResponse btcPriceResponse) {
-        Optional<Account> account = accountRepository.findByAccountId(accountId);
-        Account account1 = account.get();
-        account1.calculateBTC(amount,btcPriceResponse.getPrice());
-        accountRepository.editAccount(account1);
-        return account1;
+        Optional<Account> findedAccount = accountRepository.findByAccountId(accountId);
+        if (findedAccount.isEmpty()) {
+            log.error("Could not find account with id: {}", accountId);
+            throw new AccountDomainException("Could not find account with id " +
+                    accountId);
+        }
+        Account account = findedAccount.get();
+        account.calculateBTC(amount,btcPriceResponse.getPrice());
+        accountRepository.editAccount(account);
+        return account;
     }
 }

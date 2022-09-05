@@ -18,19 +18,13 @@ import java.util.Optional;
 @Component
 public class OrderQueryHandler {
 
-    private final AccountDataMapper accountDataMapper;
-
     private final OrderDataMapper orderDataMapper;
-
-    private final AccountRepository accountRepository;
 
     private final OrderRepository orderRepository;
 
-    public OrderQueryHandler(AccountDataMapper accountDataMapper,
-                             OrderDataMapper orderDataMapper, AccountRepository accountRepository, OrderRepository orderRepository) {
-        this.accountDataMapper = accountDataMapper;
+    public OrderQueryHandler(OrderDataMapper orderDataMapper,
+                             OrderRepository orderRepository) {
         this.orderDataMapper = orderDataMapper;
-        this.accountRepository = accountRepository;
         this.orderRepository = orderRepository;
     }
 
